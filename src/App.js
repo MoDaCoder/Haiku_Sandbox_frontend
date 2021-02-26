@@ -3,13 +3,8 @@ import Navbar from './Navbar'
 import HaikuContainer from './HaikuContainer'
 import './App.css';
 
-class App extends React.Component {
-  componentDidMount(){
-    fetch(`http://localhost:3000/haikus`)
-    .then(resp=>resp.json())
-    .then(console.log)
-  }
-  render(){
+
+function App(){
     return (
       <>
         <Navbar/>
@@ -17,6 +12,5 @@ class App extends React.Component {
       </>
     );
   }
-}
 
 export default App;

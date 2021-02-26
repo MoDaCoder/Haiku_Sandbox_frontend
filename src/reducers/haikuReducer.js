@@ -1,19 +1,19 @@
 export default function HaikuReducer(state, action){
     switch(action.type){
-        case "Fetch_Haiku":
+        case "FETCH_HAIKUS":
             return {
                 haikus: action.payload
             }
-        case "Add_Haiku":
+        case "ADD_HAIKU":
             return {
                 haikus: [...state.lists, action.payload]
             }
-        case "Delete_Haiku":
+        case "DELETE_HAIKU":
                 const newHaiku = state.haikus.filter(haiku => haiku.id !== action.payload)
                 return {
                     haikus: newHaiku
                 }
-        case "Edit_Haiku":
+        case "EDIT_HAIKU":
             const editHaiku = state.haikus.map(haiku => haiku.id === action.payload.id ? action.payload : haiku)
             return {
                 haikus: editHaiku
