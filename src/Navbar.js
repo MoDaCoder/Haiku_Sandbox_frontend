@@ -4,10 +4,10 @@ import React from 'react'
 export default function Navbar(){
     return (
         <nav>
-         <div className="grid-btn">Comedy Haikus</div>
+         {/* <div className="grid-btn">Comedy Haikus</div>
          <br></br>
          <div className="grid-btn">Tragic Haikus</div>
-         <br></br>
+         <br></br> */}
         </nav>
     )
 }

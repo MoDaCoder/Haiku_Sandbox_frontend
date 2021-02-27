@@ -13,8 +13,14 @@ class HaikuContainer extends PureComponent {
             <>
             <div className="container">
                 <div className="grid-btn">
-                    <ComedyContainer/>
-                    <TragedyContainer/>
+                    <div className="btn">
+                        <strong><span>Comedy Haikus</span></strong>
+                        <ComedyContainer/>
+                    </div>
+                    <div className="btn">
+                        <strong><span>Comedy Haikus</span></strong>
+                        <TragedyContainer/>
+                    </div>
                 </div>
             </div>
             </>
