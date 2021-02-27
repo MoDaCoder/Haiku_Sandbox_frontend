@@ -21,6 +21,8 @@ class TragedyContainer extends PureComponent {
                 <br></br>
                 <span>HaikuForm.js</span>
                 <br></br>
+                <span>New Haiku Link</span>
+                <br></br>
             </>
         )
     }

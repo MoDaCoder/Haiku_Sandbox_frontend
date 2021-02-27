@@ -11,12 +11,12 @@ class HaikuContainer extends PureComponent {
 
         return(
             <>
+            <div className="container">
                 <div className="grid-btn">
                     <ComedyContainer/>
-                </div>
-                <div className="grid-btn">
                     <TragedyContainer/>
                 </div>
+            </div>
             </>
         )
     }

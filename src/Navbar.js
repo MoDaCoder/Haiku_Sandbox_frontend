@@ -8,7 +8,6 @@ export default function Navbar(){
          <br></br>
          <div className="grid-btn">Tragic Haikus</div>
          <br></br>
-         <div>New Haiku</div>   
         </nav>
     )
 }
