@@ -35,5 +35,6 @@ body {
 }
 
 .btn:hover {
-  border-color: black;
+  /* border-color: black; */
+  border: 3px solid blueviolet;
 }
