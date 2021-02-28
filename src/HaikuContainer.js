@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import ComedyContainer from './ComedyContainer'
 import TragedyContainer from './TragedyContainer'
 // import { Route, Switch } from 'react-router-dom'
-// import haikus from './actions/haikus'
 // import {connect} from 'react-redux'
 
 class HaikuContainer extends PureComponent {
@@ -12,13 +11,13 @@ class HaikuContainer extends PureComponent {
         return(
             <>
             <div className="container">
-                <div className="grid-btn">
+                <div className="btn-grid">
                     <div className="btn">
                         <strong><span>Comedy Haikus</span></strong>
                         <ComedyContainer/>
                     </div>
                     <div className="btn">
-                        <strong><span>Comedy Haikus</span></strong>
+                        <strong><span>Tragedy Haikus</span></strong>
                         <TragedyContainer/>
                     </div>
                 </div>
@@ -29,4 +28,4 @@ class HaikuContainer extends PureComponent {
 }
 
 export default HaikuContainer
-// import {connect} from 'react-redux'
+// export default connect((HaikuContainer))

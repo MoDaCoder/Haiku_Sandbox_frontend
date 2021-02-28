@@ -1,15 +1,20 @@
 import React from 'react';
-import Navbar from './Navbar'
-import HaikuContainer from './HaikuContainer'
+import Nav from './Nav'
 import './App.css';
-
+import HaikuContainer from './HaikuContainer'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App(){
     return (
-      <>
-        <Navbar/>
-        <HaikuContainer/>
-      </>
+      <Router>
+        <>
+          <Switch>
+            {/* <Route path="/" exact component={App}/> */}
+            <Nav />
+            <Route path="/haikuGenres" component={HaikuContainer} />
+          </Switch>
+        </>
+      </Router>
     );
   }
 

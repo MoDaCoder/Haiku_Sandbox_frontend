@@ -9,6 +9,23 @@ body {
   background-color: #333;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
 .container {
   width: 800px;
   max-width: 80%;

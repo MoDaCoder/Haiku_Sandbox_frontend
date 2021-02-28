@@ -15,14 +15,14 @@ class TragedyContainer extends PureComponent {
                 <Haiku/>
                 <Haikus/>
                 <HaikuForm/>
-                <span>Haiku.js</span>
+                {/* <span>Haiku.js</span>
                 <br></br>
                 <span>Haikus.js</span>
                 <br></br>
                 <span>HaikuForm.js</span>
                 <br></br>
                 <span>New Haiku Link</span>
-                <br></br>
+                <br></br> */}
             </>
         )
     }

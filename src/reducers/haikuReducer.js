@@ -1,13 +1,13 @@
-// export default function HaikuReducer(state, action){
-//     switch(action.type){
-//         case "FETCH_HAIKUS":
-//             return {
-//                 haikus: action.payload
-//             }
-//         case "ADD_HAIKU":
-//             return {
-//                 haikus: [...state.lists, action.payload]
-//             }
+export default function haikuReducer(state, action){
+    switch(action.type){
+        case "FETCH_HAIKUS":
+            return {
+                haikus: action.payload
+            }
+        case "ADD_HAIKU":
+            return {
+                haikus: [...state.lists, action.payload]
+            }
 //         case "DELETE_HAIKU":
 //                 const newHaiku = state.haikus.filter(haiku => haiku.id !== action.payload)
 //                 return {
@@ -18,12 +18,6 @@
 //             return {
 //                 haikus: editHaiku
 //             }
-//         default:
-//             return state
-//     }
-// }
-export default (state = [], action) => {
-    switch (action.type) {
         default:
             return state
     }

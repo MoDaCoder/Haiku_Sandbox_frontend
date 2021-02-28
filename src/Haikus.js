@@ -5,7 +5,9 @@ export default class Haikus extends PureComponent {
 
     render(){
         return(
-            <li>Haikus</li>
+            <>
+                {/* <li>Haikus</li> */}
+            </>
         )
     }
 }
