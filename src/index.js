@@ -6,19 +6,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
-import { Provider } from 'react-redux'
 import thunk  from "redux-thunk"
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { Provider } from 'react-redux'
+import haikuReducer from './reducers/haikuReducer.js'
 
-const users = () => []
 const reducer = combineReducers({
-  users
+  haiku: haikuReducer
 })
 
 const composeEnhancer = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
 
-const store = createStore(reducer, compose(applyMiddleware(thunk)))
+const store = createStore(reducer, composeEnhancer(applyMiddleware(thunk), composeWithDevTools()))
 
 ReactDOM.render(
     <Provider store={store}>
@@ -26,4 +26,3 @@ ReactDOM.render(
       </Provider>,
   document.getElementById('root')
 );
-reportWebVitals();
