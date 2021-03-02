@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import Haiku from './Haiku'
 import Haikus from './Haikus'
 import HaikuForm from './HaikuForm'
-// import haikus from './actions/haikus'
+import {fetchHaikus} from './actions/haikuActions'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import {connect} from 'react-redux'
 
@@ -10,8 +10,7 @@ class ComedyContainer extends PureComponent {
 
     componentDidMount(){
        const haikus = [{haiku: "no", id: 1}]
-       const action = {type: "FETCH_HAIKUS", payload: haikus}
-       this.props.dispatch(action)
+       this.props.fetchHaikus(haikus)
         // this.props.fetchLists()
     }
 
@@ -43,10 +42,4 @@ const mapStateTopProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        fetchLists: (haikus) => dispatch({type: "Fetch_Haikus", payload: haikus})
-    }
-}
-export default connect(mapStateTopProps)(ComedyContainer)
-// export default connect(mapStateTopProps, mapDispatchToProps)(ComedyContainer)
+export default connect(mapStateTopProps, {fetchHaikus})(ComedyContainer)

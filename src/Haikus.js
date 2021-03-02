@@ -6,7 +6,7 @@ export default class Haikus extends PureComponent {
 render(){
     return (
         <ul>
-            {this.props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li>{haiku.title}<br/>{haiku.haiku}<br/>{haiku.genre}<br/></li></Link>)}
+            {this.props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li key={haiku.id}>{haiku.title}</li></Link>)}
         </ul>
     )
     }

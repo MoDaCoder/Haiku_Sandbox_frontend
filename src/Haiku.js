@@ -1,14 +1,14 @@
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 // // import deleteHaiku from './actions/deleteHaiku'
 // import {withRouter} from 'react-router-dom'
 import HaikuForm from './HaikuForm'
 
-
-function Haiku(){
+function Haiku(props){
 
     return (
         <>
-            <HaikuForm/>
+            <li>{props.list && props.list.name}</li>
+            <HaikuForm haiku={props.haiku}/>
         </>
     )
 }
