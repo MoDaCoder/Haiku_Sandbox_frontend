@@ -8,9 +8,8 @@ function App(){
     return (
       <Router>
         <>
+          <Nav />
           <Switch>
-            {/* <Route path="/" exact component={App}/> */}
-            <Nav />
             <Route path="/haikuGenres" component={HaikuContainer} />
           </Switch>
         </>

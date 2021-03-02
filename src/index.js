@@ -14,6 +14,9 @@ import haikuReducer from './reducers/haikuReducer.js'
 const composeEnhancer = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
 
 const initialState = {}
+
+
+
 const store = createStore(haikuReducer, initialState, composeEnhancer(applyMiddleware(thunk), composeWithDevTools()))
 
 ReactDOM.render(

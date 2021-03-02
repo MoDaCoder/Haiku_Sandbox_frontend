@@ -1,4 +1,4 @@
-export default function haikuReducer(state, action){
+export default function haikuReducer(state={}, action){
     switch(action.type){
         case "FETCH_HAIKUS":
             return {
