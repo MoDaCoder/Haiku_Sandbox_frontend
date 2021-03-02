@@ -8,10 +8,8 @@ import {connect} from 'react-redux'
 
 class ComedyContainer extends PureComponent {
 
-    componentDidMount(){
-       const haikus = [{haiku: "no", id: 1}]
+    componentDidMount(haikus){
        this.props.fetchHaikus(haikus)
-        // this.props.fetchLists()
     }
 
     render(){
@@ -26,9 +24,9 @@ class ComedyContainer extends PureComponent {
                         {/* <HaikuForm submitHaiku={this.submitHaiku}/> */}
                         <HaikuForm />
                     {/* </Route> */}
-                    <Route>
+                    {/* <Route>
                         <Haiku/>
-                    </Route>
+                    </Route> */}
                     <Route exact path="/haikus/:id" render={((routerProps) => <Haiku haiku={this.props.haikus.find(haiku => haiku.id === parseInt(routerProps.match.params.id))} /> ) } />
                 </Switch>
                 </BrowserRouter>
@@ -37,9 +35,9 @@ class ComedyContainer extends PureComponent {
     }
 }
 
-const mapStateTopProps = state => {
+const mapStateTopProps = ({ haikus }) => {
     return {
-        haikus: state.haikus
+        haikus
     }
 }
 

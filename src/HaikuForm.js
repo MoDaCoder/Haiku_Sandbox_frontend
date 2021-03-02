@@ -51,17 +51,6 @@ class HaikuForm extends Component {
             </form>
         )
 }
-
-    // redirectOrRenderForm = () => {
-    //     return (
-    //         <form on onSubmit={this.handleSubmit.bind(this)}>
-    //             <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} title="title"/>
-    //             <input type="submit"/>
-    //         </form>
-    //     )
-    // }
-
-
     render(){
         return (
             <>
