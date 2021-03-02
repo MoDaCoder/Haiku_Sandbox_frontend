@@ -2,18 +2,18 @@ import React from 'react';
 import Nav from './Nav'
 import './App.css';
 import HaikuContainer from './HaikuContainer'
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom';
 
 function App(){
     return (
-      <Router>
         <>
+        <BrowserRouter>
           <Nav />
-          <Switch>
-            <Route path="/haikuGenres" component={HaikuContainer} />
-          </Switch>
+            <Route exact path="/haikuGenres" >
+            <HaikuContainer/>
+            </Route>
+          </BrowserRouter>
         </>
-      </Router>
     );
   }
 

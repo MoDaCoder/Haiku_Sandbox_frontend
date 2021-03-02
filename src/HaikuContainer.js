@@ -7,7 +7,6 @@ import TragedyContainer from './TragedyContainer'
 class HaikuContainer extends PureComponent {
 
     render(){
-
         return(
             <>
             <div className="container">
@@ -28,4 +27,3 @@ class HaikuContainer extends PureComponent {
 }
 
 export default HaikuContainer
-// export default connect((HaikuContainer))

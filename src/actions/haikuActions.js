@@ -1,13 +1,13 @@
-export function fetchHaikus(haikus){
-    return (dispatch) => {
-        fetch(`http://localhost:3000/haikus`)
-        .then(res => res.json)
-        .then(haikus => {
-            dispatch({type: "FETCH_HAIKUS", payload: haikus.data})
-            // dispatch({type: "FETCH_HAIKUS", payload: haikus})
-        })
-    }
-}
+// export function fetchHaikus(haikus){
+//     return (dispatch) => {
+//         fetch(`http://localhost:3000/haikus`)
+//         .then(res => res.json)
+//         .then(haikus => {
+//             dispatch({type: "FETCH_HAIKUS", payload: haikus.data})
+//             // dispatch({type: "FETCH_HAIKUS", payload: haikus})
+//         })
+//     }
+// }
 
 export function addHaiku(haiku){
     return (dispatch) => {
