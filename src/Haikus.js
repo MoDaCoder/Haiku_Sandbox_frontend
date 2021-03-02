@@ -9,7 +9,7 @@ render(){
         <ul>
             {this.props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li key={haiku.id}><Haiku haiku={haiku.title}/></li></Link>)}
         </ul>
-    )
+        )
     }
 }
 

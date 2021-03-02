@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import {deleteHaiku} from './actions/haikuActions'
 import {withRouter} from 'react-router-dom'
-// import HaikuForm from './HaikuForm'
+import HaikuForm from './HaikuForm'
 
 function Haiku(props){
 
@@ -10,9 +10,12 @@ function Haiku(props){
         props.history.push('/haikus')
     }
 
-    return <li>{props.haiku && props.haiku.title}<button onClick={handleClick}>Delete</button></li>
-            {/* <HaikuForm haiku={props.haiku}/> */}
-
+    return (
+        <>
+        <li>{props.haiku && props.haiku.title}<button onClick={handleClick}>Delete</button></li>
+        <HaikuForm haiku={props.haiku}/>
+        </>
+    )
 }
 
 export default withRouter(connect(null, { deleteHaiku })(Haiku))

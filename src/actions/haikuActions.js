@@ -53,16 +53,23 @@ export function editHaiku(haiku){
     }
 }
 
-export function deleteHaiku(haikuId){
-    return (dispatch) => {
-        const options = {
-            method: "DELETE"
-        }
-        
-        fetch(`http://localhost:3000/haikus/${haikuId}`, options)
-        .then(res => res.json())
-        .then(message => {
-            dispatch({type: "DELETE_LIST", payload: haikuId})
-        })
+export function deleteHaiku(haiku){
+    return {
+        type:"DELETE_HAIKU",
+        payload: haiku
     }
 }
+
+// export function deleteHaiku(haikuId){
+//     return (dispatch) => {
+//         const options = {
+//             method: "DELETE"
+//         }
+        
+//         fetch(`http://localhost:3000/haikus/${haikuId}`, options)
+//         .then(res => res.json())
+//         .then(message => {
+//             dispatch({type: "DELETE_LIST", payload: haikuId})
+//         })
+//     }
+// }
