@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import Haiku from './Haiku'
 import Haikus from './Haikus'
-import HaikuForm from './HaikuForm'
+// import HaikuForm from './HaikuForm'
 // import { Route, Switch } from 'react-router-dom'
 // import haikus from './actions/haikus'
 // import {connect} from 'react-redux'
@@ -14,7 +14,7 @@ class TragedyContainer extends PureComponent {
             <>
                 <Haiku/>
                 <Haikus/>
-                <HaikuForm/>
+                {/* <HaikuForm/> */}
                 {/* <span>Haiku.js</span>
                 <br></br>
                 <span>Haikus.js</span>

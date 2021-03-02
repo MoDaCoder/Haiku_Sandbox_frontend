@@ -5,10 +5,10 @@ export default function haikuReducer(state, action){
             return {
                 haikus: action.payload
             }
-    //     case "ADD_HAIKU":
-    //         return {
-    //             haikus: [...state.haikus, action.payload]
-    //         }
+        case "ADD_HAIKU":
+            return {
+                haikus: [...state.haikus, action.payload]
+            }
         // case "DELETE_HAIKU":
         //         const newHaiku = state.haikus.filter(haiku => haiku.id !== action.payload)
         //         return {

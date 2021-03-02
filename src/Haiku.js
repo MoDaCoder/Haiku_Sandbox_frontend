@@ -7,7 +7,7 @@ function Haiku(props){
 
     return (
         <>
-            <li>{props.list && props.list.name}</li>
+            {/* <li>{props.list && props.list.name}</li> */}
             <HaikuForm haiku={props.haiku}/>
         </>
     )
