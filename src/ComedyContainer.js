@@ -23,7 +23,8 @@ class ComedyContainer extends PureComponent {
                         <Haikus haikus={this.props.haikus}/>
                     </Route>
                     {/* <Route exact path="/comedyHaikus/new"> */}
-                        <HaikuForm submitHaiku={this.submitHaiku}/>
+                        {/* <HaikuForm submitHaiku={this.submitHaiku}/> */}
+                        <HaikuForm />
                     {/* </Route> */}
                     <Route>
                         <Haiku/>

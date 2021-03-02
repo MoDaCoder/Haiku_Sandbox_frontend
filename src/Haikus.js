@@ -14,5 +14,5 @@ render(){
 
 
 Haikus.defaultProps = {
-haikus: [{title:"example haiku", haiku:"Haikus are easy But sometimes they don't make sense Refrigerator.", genre:"Comedy"}]
+haikus: [{title:"example haiku", haiku:"Haikus are easy But sometimes they don't make sense Refrigerator.", genre:"Comedy"},{title:"example haiku", haiku:"Haikus are easy But sometimes they don't make sense Refrigerator.", genre:"Comedy"},{title:"example haiku", haiku:"Haikus are easy But sometimes they don't make sense Refrigerator.", genre:"Comedy"}]
 }

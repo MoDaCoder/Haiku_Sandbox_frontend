@@ -10,24 +10,30 @@ export function fetchHaikus(haikus){
 }
 
 export function addHaiku(haiku){
-    return (dispatch) => {
-        const options = {
-            method: "POST", 
-            headers: {
-                "Content-type": "application/json", 
-                "accept": "application/json"
-            }, 
-            body: JSON.stringify({haiku})
-        }
-
-        fetch(`http://localhost:3000/haikus`, options)
-        .then(res => res.json())
-        .then(haiku => {
-            dispatch({type: "ADD_LIST", payload: haiku.data})
-            // dispatch({type: "ADD_LIST", payload: haiku.data})
-        })
+    return {
+        type: "ADD_HAIKU",
+        payload: haiku
     }
 }
+// export function addHaiku(haiku){
+//     return (dispatch) => {
+//         const options = {
+//             method: "POST", 
+//             headers: {
+//                 "Content-type": "application/json", 
+//                 "accept": "application/json"
+//             }, 
+//             body: JSON.stringify({haiku})
+//         }
+
+//         fetch(`http://localhost:3000/haikus`, options)
+//         .then(res => res.json())
+//         .then(haiku => {
+//             dispatch({type: "ADD_LIST", payload: haiku.data})
+//             // dispatch({type: "ADD_LIST", payload: haiku.data})
+//         })
+//     }
+// }
 
 export function editHaiku(haiku){
     return (dispatch) => {

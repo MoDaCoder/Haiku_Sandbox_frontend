@@ -6,6 +6,7 @@ export default function haikuReducer(state, action){
                 haikus: action.payload
             }
         case "ADD_HAIKU":
+            debugger
             return {
                 haikus: [...state.haikus, action.payload]
             }

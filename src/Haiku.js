@@ -1,4 +1,4 @@
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 // // import deleteHaiku from './actions/deleteHaiku'
 // import {withRouter} from 'react-router-dom'
 import HaikuForm from './HaikuForm'
