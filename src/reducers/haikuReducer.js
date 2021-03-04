@@ -15,11 +15,11 @@ export default function haikuReducer(state, action){
                 return {
                     haikus: newHaiku
                 }
-    //     case "EDIT_HAIKU":
-    //         const editHaiku = state.haikus.map(haiku => haiku.id === action.payload.id ? action.payload : haiku)
-    //         return {
-    //             haikus: editHaiku
-    //         }
+        case "EDIT_HAIKU":
+            const editHaiku = state.haikus.map(haiku => haiku.id === action.payload.id ? action.payload : haiku)
+            return {
+                haikus: editHaiku
+            }
         default:
             return state
     }

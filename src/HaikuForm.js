@@ -2,38 +2,29 @@ import React, {Component} from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addHaiku } from './actions/haikuActions'
-
-// import editHaiku from './actions/editHaiku'
+import { editHaiku } from './actions/haikuActions'
 
 class HaikuForm extends Component {
 
+    // Normally do not set state directly to props 
     constructor(props){
         super(props)
         this.state = {
-                title: "",
-                id: Math.floor(Math.random() * Math.floor(1000))
-            }
-            // title: this.props.haiku ? this.props.haiku.title : "",
-            // id: this.props.haiku ? this.props.haiku.id : ""
-        // }
+            title: this.props.haiku.attributes ? this.props.haiku.attributes.title : "",
+            haiku: this.props.haiku ? this.props.haiku.haiku : "",
+            genre: this.props.haiku ? this.props.haiku.genre : "",
+            id: this.props.haiku ? this.props.haiku.id : Math.floor(Math.random() * Math.floor(1000))
+        }
     }
 
-    // handleSubmit(event) {
-    //     event.preventDefault()
-    //     if(!this.props.haiku){
-    //         this.props.addHaiku(this.state)
-    //     } else {
-    //         this.props.editHaiku(this.state)
-    //     }
-    //     this.setState({ title: "", id: "" })
-    //     this.props.history.push('/haikus')
-    // }
-
-    handleSubmit(event){
+    handleSubmit(event) {
         event.preventDefault()
-        this.props.addHaiku(this.state)
-
-        this.setState({title: ""})
+        if(!this.props.haiku){
+            this.props.addHaiku(this.state)
+        } else {
+            this.props.editHaiku(this.state)
+        }
+        this.setState({ title: "", id: "" })
         this.props.history.push('/haikus')
     }
 
@@ -61,4 +52,4 @@ class HaikuForm extends Component {
 
 }
 
-export default withRouter(connect(null, { addHaiku })(HaikuForm))
+export default withRouter(connect(null, { addHaiku, editHaiku })(HaikuForm))

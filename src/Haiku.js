@@ -12,6 +12,9 @@ function Haiku(props){
     // debugger
     return (
         <>
+        {/* <li>{props.haiku && props.haiku.title}</li>
+        {props.haiku && props.haiku.haiku}<br></br>
+        {props.haiku && props.haiku.genre}<button onClick={handleClick}>Delete</button> */}
         <li>{props.haiku.attributes && props.haiku.attributes.title}</li>
         {props.haiku.attributes && props.haiku.attributes.haiku}<br></br>
         {props.haiku.attributes && props.haiku.attributes.genre}<button onClick={handleClick}>Delete</button>

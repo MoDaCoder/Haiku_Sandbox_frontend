@@ -9,8 +9,9 @@ import {connect} from 'react-redux'
 
 class HaikuContainer extends PureComponent {
 
-    componentDidMount(haikus){
-       this.props.fetchHaikus(haikus)
+    componentDidMount(){
+        const haikus = [{title: "Time Winds", haiku: "Trees softly strain night winds, tugging back the boughs. Back. Falling to childhood.", genre: "poetic",  id:103}]
+        this.props.fetchHaikus(haikus)
     }
 
     render(){
