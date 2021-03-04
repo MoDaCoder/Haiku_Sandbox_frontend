@@ -1,10 +1,8 @@
 import React, { PureComponent } from 'react'
-import Haiku from './Haiku'
-import Haikus from './Haikus'
-// import HaikuForm from './HaikuForm'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-// import haikus from './actions/haikus'
-// import {connect} from 'react-redux'
+import HaikuForm from './HaikuForm'
+// import Haiku from './Haiku'
+// import Haikus from './Haikus'
+// import { BrowserRouter, Switch} from 'react-router-dom';
 
 class TragedyContainer extends PureComponent {
 
@@ -12,22 +10,11 @@ class TragedyContainer extends PureComponent {
 
         return (
             <>
-                <BrowserRouter>
-                <Switch>
-                {/* <Haiku/> */}
-                <Haikus/>
-                <Route exact path="/haikus/:id" render={((routerProps) => <Haiku haiku={this.props.haikus.find(haiku => haiku.id === parseInt(routerProps.match.params.id))} /> ) } />
-                {/* <HaikuForm/> */}
-                {/* <span>Haiku.js</span>
-                <br></br>
-                <span>Haikus.js</span>
-                <br></br>
-                <span>HaikuForm.js</span>
-                <br></br>
-                <span>New Haiku Link</span>
-                <br></br> */}
-                </Switch>
-                </BrowserRouter>
+                {/* <BrowserRouter> */}
+                {/* <Switch> */}
+                <HaikuForm/>
+                {/* </Switch> */}
+                {/* </BrowserRouter> */}
 
             </>
         )
@@ -35,4 +22,3 @@ class TragedyContainer extends PureComponent {
 }
 
 export default TragedyContainer
-// export default connect 

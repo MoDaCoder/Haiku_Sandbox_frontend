@@ -1,7 +1,8 @@
 export function fetchHaikus(haikus){
+    // debugger
     return (dispatch) => {
         fetch(`http://localhost:3000/haikus`)
-        .then(res => res.json)
+        .then(res => res.json())
         .then(haikus => {
             dispatch({type: "FETCH_HAIKUS", payload: haikus.data})
             // dispatch({type: "FETCH_HAIKUS", payload: haikus})
@@ -9,13 +10,7 @@ export function fetchHaikus(haikus){
     }
 }
 
-// export function addHaiku(haiku){
-//     return {
-//         type: "ADD_HAIKU",
-//         payload: haiku
-//     }
-// }
-export function addHaiku(haiku){
+export function addHaiku(haiku, history){
     return (dispatch) => {
         const options = {
             method: "POST", 
@@ -30,6 +25,7 @@ export function addHaiku(haiku){
         .then(res => res.json())
         .then(haiku => {
             dispatch({type: "ADD_HAIKU", payload: haiku.data})
+            // history.push('/haikus')
             // dispatch({type: "ADD_HAIKU", payload: haiku.data})
         })
     }
@@ -53,23 +49,15 @@ export function editHaiku(haiku){
     }
 }
 
-export function deleteHaiku(haiku){
-    return {
-        type:"DELETE_HAIKU",
-        payload: haiku
+export function deleteHaiku(haikuId){
+    return (dispatch) => {
+        const options = {
+            method: "DELETE"
+        }
+        fetch(`http://localhost:3000/haikus/${haikuId}`, options)
+        .then(res => res.json())
+        .then(message => {
+            dispatch({type: "DELETE_LIST", payload: haikuId})
+        })
     }
 }
-
-// export function deleteHaiku(haikuId){
-//     return (dispatch) => {
-//         const options = {
-//             method: "DELETE"
-//         }
-        
-//         fetch(`http://localhost:3000/haikus/${haikuId}`, options)
-//         .then(res => res.json())
-//         .then(message => {
-//             dispatch({type: "DELETE_LIST", payload: haikuId})
-//         })
-//     }
-// }

@@ -5,9 +5,12 @@ import {Link} from 'react-router-dom'
 export default class Haikus extends PureComponent {
 
 render(){
+    // debugger
     return (
         <ul>
-            {this.props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li key={haiku.id}><Haiku haiku={haiku.title}/></li></Link>)}
+            {/* This will render me a list of haikus with links to an individual haiku */}
+            {/* {this.props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li className="haikus" key={haiku.id}>{haiku.title}</li></Link>)} */}
+            {this.props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li className="haikus" key={haiku.id}><Haiku haiku={haiku}/></li></Link>)}
         </ul>
         )
     }

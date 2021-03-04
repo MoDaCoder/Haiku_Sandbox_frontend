@@ -13,7 +13,7 @@ export default function Nav(){
                 <Link style={navStyle} to='/home'>
                     <li>Home</li>
                 </Link>
-                <Link style={navStyle} to='/haikuGenres'>
+                <Link style={navStyle} to='/haikus'>
                     <li>Haiku Genres</li>
                 </Link>
                 <Link style={navStyle} to='/comedyHaikus'>
