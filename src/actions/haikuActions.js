@@ -4,13 +4,13 @@ export function fetchHaikus(haikus){
         fetch(`http://localhost:3000/haikus`)
         .then(res => res.json())
         .then(haikus => {
-            dispatch({type: "FETCH_HAIKUS", payload: haikus.data})
-            // dispatch({type: "FETCH_HAIKUS", payload: haikus})
+            dispatch({type: "FETCH_HAIKUS", payload: haikus})
         })
     }
 }
 
-export function addHaiku(haiku, history){
+export function addHaiku(haiku){
+    // console.log(haiku)
     return (dispatch) => {
         const options = {
             method: "POST", 
@@ -20,13 +20,11 @@ export function addHaiku(haiku, history){
             }, 
             body: JSON.stringify({haiku})
         }
-
         fetch(`http://localhost:3000/haikus`, options)
         .then(res => res.json())
+        // .then(console.log)
         .then(haiku => {
-            dispatch({type: "ADD_HAIKU", payload: haiku.data})
-            // history.push('/haikus')
-            // dispatch({type: "ADD_HAIKU", payload: haiku.data})
+            dispatch({type: "ADD_HAIKU", payload: haiku})
         })
     }
 }
@@ -44,7 +42,7 @@ export function editHaiku(haiku){
         fetch(`http://localhost:3000/haikus/${haiku.id}`, options)
         .then(res => res.json())
         .then(haiku => {
-            dispatch({type: "EDIT_LIST", payload: haiku.data})
+            dispatch({type: "EDIT_LIST", payload: haiku})
         })
     }
 }

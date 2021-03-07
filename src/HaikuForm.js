@@ -10,10 +10,15 @@ class HaikuForm extends Component {
     constructor(props){
         super(props)
         this.state = {
-            title: this.props.haiku.attributes ? this.props.haiku.attributes.title : "",
-            haiku: this.props.haiku ? this.props.haiku.haiku : "",
-            genre: this.props.haiku ? this.props.haiku.genre : "",
-            id: this.props.haiku ? this.props.haiku.id : Math.floor(Math.random() * Math.floor(1000))
+            id: this.props.haiku ? this.props.haiku.id : "",
+            title: this.props.haiku ? this.props.haiku.title : "",
+            // haiku: this.props.haiku ? this.props.haiku.haiku : "",
+            // genre: this.props.haiku ? this.props.haiku.genre : "",
+            
+            // title: this.props.haiku ? this.props.haiku.attributes.title : "",
+            // haiku: this.props.haiku ? this.props.haiku.attributes.haiku : "",
+            // genre: this.props.haiku ? this.props.haiku.attributes.genre : "",
+            // id: this.props.haiku ? this.props.haiku.id : ""
         }
     }
 
@@ -24,13 +29,16 @@ class HaikuForm extends Component {
         } else {
             this.props.editHaiku(this.state)
         }
-        this.setState({ title: "", id: "" })
+        this.setState({ title: "", haiku: "", genre: "" ,id: "" })
         this.props.history.push('/haikus')
     }
 
     handleChange(event){
         this.setState({
             [event.target.title]: event.target.value
+            // [event.target.haiku]: event.target.value,
+            // [event.target.genre]: event.target.value
+
         })
     }
 
@@ -38,6 +46,8 @@ class HaikuForm extends Component {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} title="title"/>
+                {/* <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} haiku="haiku"/>
+                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.genre} genre="genre"/> */}
                 <input type="submit"/>
             </form>
         )
