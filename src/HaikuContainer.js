@@ -15,10 +15,6 @@ class HaikuContainer extends PureComponent {
 
 
   render() {
-
-    // const haikkus = this.props
-    // console.log(haikkus)
-    // console.log({haikus})
     
     return (
       <>

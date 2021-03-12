@@ -1,5 +1,4 @@
 export function fetchHaikus(haikus){
-    // debugger
     return (dispatch) => {
         fetch(`http://localhost:3000/haikus`)
         .then(res => res.json())
@@ -10,7 +9,6 @@ export function fetchHaikus(haikus){
 }
 
 export function addHaiku(haiku){
-    // console.log(haiku)
     return (dispatch) => {
         const options = {
             method: "POST", 
@@ -22,7 +20,6 @@ export function addHaiku(haiku){
         }
         fetch(`http://localhost:3000/haikus`, options)
         .then(res => res.json())
-        // .then(console.log)
         .then(haiku => {
             dispatch({type: "ADD_HAIKU", payload: haiku})
         })

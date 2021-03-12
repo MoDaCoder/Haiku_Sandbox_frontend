@@ -4,13 +4,13 @@ import { withRouter } from "react-router-dom";
 import HaikuForm from "./HaikuForm";
 
 function Haiku(props) {
-  // debugger
+
   const handleClick = () => {
     props.deleteHaiku(props.haiku.id)
     props.history.push('/haikus')
   };
   console.log(props);
-  // debugger
+
   return (
     <>
       <li>{props.haiku && props.haiku.title}</li>
