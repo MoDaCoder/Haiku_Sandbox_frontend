@@ -6,8 +6,7 @@ import HaikuForm from "./HaikuForm";
 function Haiku(props) {
   // debugger
   const handleClick = () => {
-    console.log(props.haiku)
-    props.deleteHaiku(props.id)
+    props.deleteHaiku(props.haiku.id)
     props.history.push('/haikus')
   };
   console.log(props);
@@ -15,7 +14,7 @@ function Haiku(props) {
   return (
     <>
       <li>{props.haiku && props.haiku.title}</li>
-      {props.haiku && props.haiku.haiku}
+      <li>{props.haiku && props.haiku.haiku}</li>
       <br></br>
       {props.haiku && props.haiku.genre}
       <button onClick={handleClick}>Delete</button>

@@ -12,8 +12,8 @@ class HaikuForm extends Component {
         this.state = {
             id: this.props.haiku ? this.props.haiku.id : "",
             title: this.props.haiku ? this.props.haiku.title : "",
-            // haiku: this.props.haiku ? this.props.haiku.haiku : "",
-            // genre: this.props.haiku ? this.props.haiku.genre : "",
+            haiku: this.props.haiku ? this.props.haiku.haiku : "",
+            genre: this.props.haiku ? this.props.haiku.genre : ""
             
             // title: this.props.haiku ? this.props.haiku.attributes.title : "",
             // haiku: this.props.haiku ? this.props.haiku.attributes.haiku : "",
@@ -35,19 +35,18 @@ class HaikuForm extends Component {
 
     handleChange(event){
         this.setState({
-            [event.target.title]: event.target.value
-            // [event.target.haiku]: event.target.value,
-            // [event.target.genre]: event.target.value
+            [event.target.name]: event.target.value
 
         })
     }
 
     redirectOrRenderForm = () => {
         return (
+            
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} title="title"/>
-                {/* <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} haiku="haiku"/>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.genre} genre="genre"/> */}
+                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} name="title"/>
+                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} name="haiku"/>
+                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.genre} name="genre"/>
                 <input type="submit"/>
             </form>
         )

@@ -7,7 +7,7 @@ import HaikuForm from './HaikuForm'
 class TragedyContainer extends PureComponent {
 
     render(){
-
+        debugger
         return (
             <>
                 {/* <BrowserRouter> */}
