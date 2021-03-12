@@ -9,7 +9,6 @@ function Haiku(props) {
     props.deleteHaiku(props.haiku.id)
     props.history.push('/haikus')
   };
-  console.log(props);
 
   return (
     <>

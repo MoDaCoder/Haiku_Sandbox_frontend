@@ -36,7 +36,6 @@ class HaikuForm extends Component {
     handleChange(event){
         this.setState({
             [event.target.name]: event.target.value
-
         })
     }
 
@@ -44,8 +43,8 @@ class HaikuForm extends Component {
         return (
             
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} name="title"/>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} name="haiku"/>
+                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} name="title"/><br></br>
+                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} name="haiku"/><br></br>
                 <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.genre} name="genre"/>
                 <input type="submit"/>
             </form>

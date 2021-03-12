@@ -17,7 +17,6 @@ const initialState = {}
 // })
 
 const store = createStore(haikuReducer, initialState, composeEnhancer(applyMiddleware(thunk), composeWithDevTools()))
-// debugger
 ReactDOM.render(
     <Router>
     <Provider store={store}>

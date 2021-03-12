@@ -12,8 +12,6 @@ class HaikuContainer extends PureComponent {
     this.props.fetchHaikus();
   }
 
-
-
   render() {
     
     return (
@@ -23,15 +21,8 @@ class HaikuContainer extends PureComponent {
             <Haikus haikus={this.props.haikus} />
           </Route>
 
-
-          {/* <Route exact path='/haikus/:id' render={props =>{
-          const haiku = haikkus.find(haiku => haiku.id === props.match.params.id)
-          return <Haiku haiku={haiku} {...props}/>
-          }
-        }/> */}
           <Route exact path="/haikus/:id" render={((routerProps) => <Haiku haiku={this.props.haikus.find(haiku => haiku.id === parseInt(routerProps.match.params.id))} /> ) }/>
 
-          {/* <Route exact path="/haikus/:id" render={((router) => <Haiku history={props.routerProps.history} haiku={props.haikus.find(haiku => haiku.id === parseInt(routerProps.match.params.id))} /> ) } /> */}
           <div className="container">
             <div className="btn-grid">
               <div className="btn">

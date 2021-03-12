@@ -17,10 +17,9 @@ export default function haikuReducer(state, action){
                 }
         case "EDIT_HAIKU":
             const editHaiku = state.haikus.map(haiku => haiku.id === action.payload.id ? action.payload : haiku)
-            return editHaiku
-            // return {
-            //     haikus: editHaiku
-            // }
+            return {
+                haikus: editHaiku
+            }
 
         //IT STILL WORKS... BUT WHY? lol
             //     case "EDIT_HAIKU":
