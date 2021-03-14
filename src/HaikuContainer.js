@@ -13,16 +13,15 @@ class HaikuContainer extends PureComponent {
   }
 
   render() {
-    
+    // debugger
     return (
       <>
         <Switch>
           <Route exact path="/haikus">
             <Haikus haikus={this.props.haikus} />
           </Route>
-
+          {/* <Route exact path="/haikus/:id" render={((routerProps) => <Haiku haiku={this.props.haikus.find(haiku => haiku.id === routerProps.match.params.id)} /> ) }/> */}
           <Route exact path="/haikus/:id" render={((routerProps) => <Haiku haiku={this.props.haikus.find(haiku => haiku.id === parseInt(routerProps.match.params.id))} /> ) }/>
-
           <div className="container">
             <div className="btn-grid">
               <div className="btn">

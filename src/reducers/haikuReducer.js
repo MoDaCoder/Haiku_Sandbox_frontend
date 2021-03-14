@@ -6,7 +6,6 @@ export default function haikuReducer(state, action){
                 haikus: action.payload
             }
         case "ADD_HAIKU":
-            // debugger
             return {
                 haikus: [...state.haikus, action.payload]
             }
@@ -15,22 +14,13 @@ export default function haikuReducer(state, action){
                 return {
                     haikus: newHaiku
                 }
-        case "EDIT_HAIKU":
-            const editHaiku = state.haikus.map(haiku => haiku.id === action.payload.id ? action.payload : haiku)
+        case "EDIT_HAIKU":       
+        // debugger
+            // const editHaiku = state.haikus.map(haiku => haiku.id === action.payload.id ? action.payload : haiku)
+            const editHaiku = state.haikus.map(haiku => haiku.id === parseInt(action.payload.id) ? action.payload : haiku)
             return {
                 haikus: editHaiku
             }
-
-        //IT STILL WORKS... BUT WHY? lol
-            //     case "EDIT_HAIKU":
-            // const editHaiku = state.haikus.map(haiku => haiku.id === action.payload.id ? action.payload : haiku)
-            // return {
-            //     ...state,
-            //     haikus: {
-            //         ...state,
-            //         editHaiku
-            //     }
-            // }
         default:
             return state
     }

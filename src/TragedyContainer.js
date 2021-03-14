@@ -11,7 +11,7 @@ class TragedyContainer extends PureComponent {
             <>
                 {/* <BrowserRouter> */}
                 {/* <Switch> */}
-                <HaikuForm/>
+                <HaikuForm />
                 {/* </Switch> */}
                 {/* </BrowserRouter> */}
 

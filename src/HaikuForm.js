@@ -14,11 +14,6 @@ class HaikuForm extends Component {
             title: this.props.haiku ? this.props.haiku.title : "",
             haiku: this.props.haiku ? this.props.haiku.haiku : "",
             genre: this.props.haiku ? this.props.haiku.genre : ""
-            
-            // title: this.props.haiku ? this.props.haiku.attributes.title : "",
-            // haiku: this.props.haiku ? this.props.haiku.attributes.haiku : "",
-            // genre: this.props.haiku ? this.props.haiku.attributes.genre : "",
-            // id: this.props.haiku ? this.props.haiku.id : ""
         }
     }
 

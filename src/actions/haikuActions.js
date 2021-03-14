@@ -39,7 +39,8 @@ export function editHaiku(haiku){
         fetch(`http://localhost:3000/haikus/${haiku.id}`, options)
         .then(res => res.json())
         .then(haiku => {
-            dispatch({type: "EDIT_LIST", payload: haiku})
+            dispatch({type: "EDIT_HAIKU", payload: haiku})
+            // dispatch({type: "EDIT_HAIKU", payload: haiku.data})
         })
     }
 }
