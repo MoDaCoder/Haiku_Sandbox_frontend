@@ -1,12 +1,8 @@
 import React, { PureComponent } from 'react'
 import haiku_origin from './images/haiku_origin.jpg'
-import fridge_haiku from './images/fridge_haiku.png'
-import bed_haiku from './images/bed_haiku.png'
-import out_of_haiku from './images/out_of_haiku.png'
-// import ComedyContainer from './ComedyContainer'
-// import TragedyContainer from './TragedyContainer'
-// import { Route, Switch } from 'react-router-dom'
-// import {connect} from 'react-redux'
+import fridge_haiku from './images/fridge_haiku.jpg'
+import bed_haiku from './images/bed_haiku.jpg'
+import out_of_haiku from './images/out_of_haiku.jpg'
 
 class HomeContainer extends PureComponent {
 
@@ -26,7 +22,7 @@ class HomeContainer extends PureComponent {
                 <img src={haiku_origin} className="img-fluid" alt="haiku_origin"/>
                     <div className="carousel-caption d-none d-md-block">
                         <h5>WELCOME TO HAIKU SANDBOX</h5><br></br>
-                        <p>Manufacture Your Own</p>
+                        <p>Manufacture Haikus</p>
                         <p>Or Destroy And Edit</p>
                         <p>To Blossom Something New</p>
                     </div>
@@ -59,6 +55,20 @@ class HomeContainer extends PureComponent {
             <span className="visually-hidden">Next</span>
             </button>
             </div>
+
+            <div className="haikus">
+               <strong><h5>Haiku Origin</h5></strong> 
+                <p>Haiku, unrhymed poetic form consisting of 17 syllables arranged in three lines of 5, 7, and 5 syllables respectively. The haiku first emerged in Japanese literature during the 17th century, as a terse reaction to elaborate poetic traditions, though it did not become known by the name haiku until the 19th century.</p>
+            </div>
+            <br></br>
+            <div className="haikus">
+                <h5>Haiku Rules</h5>
+                <li>The entire poem consists of just three lines, with 17 syllables in total.</li>
+                <li>The first line is 5 syllables.</li>
+                <li>The second line is 7 syllables.</li>
+                <li>The third line is 5 syllables.</li>
+            </div>
+
             {/* <div className="container">
                 <div className="btn-grid">
                     <div className="btn">
