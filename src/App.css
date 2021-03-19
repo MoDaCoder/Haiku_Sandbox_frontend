@@ -1,11 +1,4 @@
 body {
-  /* padding: 0;
-  margin: 0; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* width: 100vw; */
-  /* height: 100vh; */
   background-color: #333;
 }
 
@@ -15,6 +8,26 @@ nav {
   align-items: center;
   min-height: 10vh;
   background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+
+.carousel-item {
+  height: 25rem;
+  background: #777;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+.carousel-caption {
+  top: 70px; 
+}
+
+.carousel-item .img-fluid {
+  width:100%;
+  height:100%;
+}
+
+.label {
   color: white;
 }
 
@@ -32,7 +45,16 @@ nav {
 
 .container {
   width: 800px;
-  max-width: 80%;
+  max-width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.container1 {
+  width: 800px;
+  max-width: 50%;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
@@ -41,7 +63,14 @@ nav {
 
 .btn-grid {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-grid1 {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
   gap: 10px;
   margin-top: 20px;
 }
@@ -55,7 +84,21 @@ nav {
   outline: none;
 }
 
+.btn1 {
+  background-color: hsl(0, 100%, 50%);
+  border: 1px solid hsl(200, 100%, 30%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
 .btn:hover {
   /* border-color: black; */
   border: 3px solid blueviolet;
+}
+
+.btn1:hover {
+  /* border-color: black; */
+  border: 3px solid rgb(60, 48, 71);
 }
