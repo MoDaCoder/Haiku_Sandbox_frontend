@@ -38,6 +38,28 @@ nav {
   font-family: Tahoma;
 }
 
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px;
+  gap: 20px;
+  color: white;
+}
+
+.box-paragraph {
+  font-weight: 400;
+  max-height: 80px;
+  word-wrap: break-word;
+  text-align: left;
+  /* overflow: hidden; */
+}
+
+/* .more {
+  display: none;
+} */
+/* #more {display: none;} */
+
 .nav-links {
   width: 40%;
   display: flex;
