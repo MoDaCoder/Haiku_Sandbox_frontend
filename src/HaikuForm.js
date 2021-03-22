@@ -52,6 +52,20 @@ class HaikuForm extends Component {
         return (
             <>
                 {this.redirectOrRenderForm()}
+                <div className="haikus" id="exampleHaiku">
+                    <h4 >Example Haiku:</h4>
+                    <span>
+                    Haikus are easy<br></br>
+                    But sometimes they don't make sense<br></br>
+                    Refrigerator</span>
+                </div>
+                <div className="haikus" id="haikuRules">
+                    <h4>Haiku Rules:</h4>
+                    <li>The entire poem consists of just three lines, with 17 syllables in total.</li>
+                    <li>The first line is 5 syllables.</li>
+                    <li>The second line is 7 syllables.</li>
+                    <li>The third line is 5 syllables.</li>
+                </div>
             </>
         )
     }

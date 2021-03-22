@@ -44,6 +44,14 @@ nav {
   font-family: Tahoma;
 }
 
+#exampleHaiku {
+  padding: 10px;
+}
+
+#haikuRules {
+  padding: 10px;
+}
+
 .box {
   position: relative;
   display: grid;
