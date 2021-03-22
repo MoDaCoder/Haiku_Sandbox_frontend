@@ -41,7 +41,7 @@ class HaikuForm extends Component {
                 <label className="label" htmlFor="title">Haiku Name</label>
                 <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} name="title"/><br></br>
                 <label className="label" htmlFor="haiku">Haiku</label>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} name="haiku"/><br></br>
+                <textarea type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} name="haiku"/><br></br>
                 <label className="label" htmlFor="genre">Haiku Genre</label>
                 <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.genre} name="genre"/>
                 <input type="submit"/>
