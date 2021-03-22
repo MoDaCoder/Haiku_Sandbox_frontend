@@ -38,12 +38,12 @@ class HaikuForm extends Component {
         return (
             
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <label className="label" htmlFor="title">Haiku Name</label>
+                <label className="label" htmlFor="title">Title: </label>
                 <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.title} name="title"/><br></br>
-                <label className="label" htmlFor="haiku">Haiku</label>
-                <textarea type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} name="haiku"/><br></br>
-                <label className="label" htmlFor="genre">Haiku Genre</label>
-                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.genre} name="genre"/>
+                <label className="label" htmlFor="genre">Genre: </label>
+                <input type="text" onChange={(event) => this.handleChange(event)} value={this.state.genre} name="genre"/><br></br>
+                <label className="label" htmlFor="haiku">Haiku: </label>
+                <textarea type="text" onChange={(event) => this.handleChange(event)} value={this.state.haiku} name="haiku"/>
                 <input type="submit"/>
             </form>
         )

@@ -13,10 +13,11 @@ function Haiku(props) {
   // debugger
   return (
     <>
-      <li>{props.haiku && props.haiku.title}</li>
-      <li>{props.haiku && props.haiku.haiku}</li>
-      <br></br>
-      {props.haiku && props.haiku.genre}
+      <div className="haiku">
+        <li>Title: {props.haiku && props.haiku.title}</li>
+        <li>Genre: {props.haiku && props.haiku.genre}</li>
+        <li>Haiku: {props.haiku && props.haiku.haiku}</li>
+      </div>
       <button onClick={handleClick}>Delete</button>
       <div>
         <HaikuForm haiku={props.haiku} />

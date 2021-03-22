@@ -33,6 +33,12 @@ nav {
   color: white;
 }
 
+.haiku {
+  color: white;
+  font-family: Tahoma;
+  font-size: xx-large;
+}
+
 .haikus {
   color: white;
   font-family: Tahoma;
