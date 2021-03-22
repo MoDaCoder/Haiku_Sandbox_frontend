@@ -11,7 +11,9 @@ import { connect } from "react-redux";
 
 class HaikuContainer extends PureComponent {
   componentDidMount() {
+    console.log('a')
     this.props.fetchHaikus();
+    console.log('b')
   }
 
   render() {

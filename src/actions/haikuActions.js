@@ -1,8 +1,9 @@
 export function fetchHaikus(haikus){
     return (dispatch) => {
+        console.log('c')
         fetch(`http://localhost:3000/haikus`)
         .then(res => res.json())
-        .then(haikus => {
+        .then(haikus => { console.log('d')
             dispatch({type: "FETCH_HAIKUS", payload: haikus})
         })
     }

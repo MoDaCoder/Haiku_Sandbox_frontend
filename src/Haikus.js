@@ -1,17 +1,14 @@
-import React, { PureComponent } from "react";
 import { Link } from "react-router-dom";
 
-export default class Haikus extends PureComponent {
-  render() {
+function Haikus(props){ 
     return (
       <>
         <ul>
-          {this.props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li className="haikus">{haiku.title}</li></Link>)}
+          {props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li className="haikus">{haiku.title}</li></Link>)}
         </ul>
       </>
     );
   }
-}
 
 Haikus.defaultProps = {
   haikus: [
@@ -24,3 +21,5 @@ Haikus.defaultProps = {
     },
   ],
 };
+
+export default Haikus

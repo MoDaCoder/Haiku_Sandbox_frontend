@@ -1,15 +1,12 @@
-import React, { PureComponent } from 'react'
 import HaikuForm from './HaikuForm'
 
-class CreateHaiku extends PureComponent {
+function CreateHaiku() {
 
-    render(){
         return (
             <>
                 <HaikuForm />
             </>
         )
     }
-}
 
 export default CreateHaiku
