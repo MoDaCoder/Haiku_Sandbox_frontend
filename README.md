@@ -1,10 +1,12 @@
+# Welcome to Haiku Sandbox!
+
+This is a place for Japanese poetry lovers to create their best haikus and play around with others haikus as well to create something new!
+
 # Getting Started with Create React App
 
+To start this project you will need to run the Rails Api that can be found at: [https://github.com/MoDaCoder/Haiku_Sandbox_frontend.git](https://github.com/MoDaCoder/Haiku_Sandbox_frontend.git)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `yarn start`
 
@@ -28,6 +30,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Available Scripts
+
+In the project directory, you can run:
 
 ### `yarn eject`
 
