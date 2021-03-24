@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import Upvote from "./Upvote"
 
 function Haikus(props){ 
     return (
       <>
         <ul>
-          {props.haikus.map((haiku) => <Link to={`/haikus/${haiku.id}`}><li className="haikus">{haiku.title}</li></Link>)}
+          {props.haikus.map((haiku) => <li className="haikus"><Link to={`/haikus/${haiku.id}`}>{haiku.title}</Link><Upvote /></li>)}
         </ul>
       </>
     );

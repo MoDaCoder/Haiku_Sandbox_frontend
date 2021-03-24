@@ -58,6 +58,7 @@ class HaikuContainer extends PureComponent {
 }
 
 const mapStateTopProps = ({ haikus }) => {
+  // It deconstructs the state into an objects
   return {
     haikus
   };
